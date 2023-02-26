@@ -1,0 +1,146 @@
+/* Global Styles */
+
+* {
+	box-sizing: border-box;
+  }
+  
+  body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f2edf7;
+	color: #444;
+  }
+  
+  h1, h2, h3 {
+	font-weight: normal;
+  }
+  
+  a {
+	color: #444;
+	text-decoration: none;
+  }
+  
+  a:hover {
+	text-decoration: underline;
+  }
+  
+  ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+  }
+  
+  button {
+	border: none;
+	background-color: #b392c9;
+	color: white;
+	font-size: 1rem;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in-out;
+  }
+  
+  button:hover {
+	background-color: #896bae;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	margin-bottom: 10px;
+	width: 100%;
+	font-size: 1rem;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+	outline: none;
+	box-shadow: 0px 0px 5px 1px #b392c9;
+  }
+  
+  /* Header */
+  
+  header {
+	background-color: #896bae;
+	padding: 10px;
+	position: relative;
+	height: 60PX;
+  }
+  
+  #logo {
+	font-size: 2rem;
+	color: white;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 10px;
+  }
+  
+  nav {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 10px;
+  }
+  
+  nav ul li {
+	display: inline-block;
+	margin-left: 10px;
+  }
+  
+  /* Main Content */
+  
+  main {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 20px;
+  }
+  
+  section {
+	margin-bottom: 30px;
+  }
+  
+  section h2 {
+	font-size: 1.5rem;
+	margin-bottom: 10px;
+  }
+  
+  section p {
+	font-size: 1rem;
+	line-height: 1.5;
+  }
+  
+  .chat-box {
+	border: 1px solid #b392c9;
+	border-radius: 5px;
+	padding: 10px;
+	height: 300px;
+	overflow-y: scroll;
+  }
+  
+  .chat-box p {
+	margin-bottom: 5px;
+  }
+  
+  form label {
+	display: block;
+	font-size: 1rem;
+	margin-bottom: 5px;
+  }
+  
+  /* Footer */
+  
+  footer {
+	background-color: #896bae;
+	color: white;
+	text-align: center;
+	padding: 10px;
+  }

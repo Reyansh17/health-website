@@ -1,0 +1,49 @@
+body {
+	background-color: #f5f3f4;
+	font-family: Arial, sans-serif;
+	color: #333;
+  }
+  
+  h1 {
+	text-align: center;
+	color: #6c63ff;
+  }
+  
+  button {
+	display: block;
+	margin: 20px auto;
+	padding: 10px 20px;
+	border-radius: 5px;
+	border: none;
+	font-size: 18px;
+	cursor: pointer;
+	transition: background-color 0.2s;
+  }
+  
+  #connect-btn {
+	background-color: #6c63ff;
+	color: #fff;
+  }
+  
+  #connect-btn:hover {
+	background-color: #564dff;
+  }
+  
+  #hangup-btn {
+	background-color: #f5f3f4;
+	color: #6c63ff;
+	border: 1px solid #6c63ff;
+	display: none;
+  }
+  
+  #hangup-btn:hover {
+	background-color: #6c63ff;
+	color: #fff;
+  }
+  
+  video {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }

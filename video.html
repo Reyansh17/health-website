@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Video Call Website</title>
+</head>
+<link rel="stylesheet" href="video.css">
+<body>
+	<h1>Welcome to HealthCheffCall</h1>
+
+	<button id="connect-btn">Connect me to a Doctor</button>
+	<button id="hangup-btn" style="display: none;">Hangup</button>
+
+	<!-- Video element where the call will be displayed -->
+	<video id="localVideo" autoplay playsinline muted></video>
+
+	<script>
+		const connectBtn = document.querySelector('#connect-btn');
+		const hangupBtn = document.querySelector('#hangup-btn');
+		const localVideo = document.querySelector('#localVideo');
+		let localStream;
+
+		// Function to start the video call
+		async function startVideoCall() {
+			try {
+				localStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+				localVideo.srcObject = localStream;
+				connectBtn.style.display = 'none';
+				hangupBtn.style.display = 'inline';
+			} catch (err) {
+				console.error('Error starting video call: ', err);
+			}
+		}
+
+		// Function to hangup the call and stop video/audio tracks
+		function hangupVideoCall() {
+			localStream.getTracks().forEach(track => {
+				track.stop();
+			});
+			localVideo.srcObject = null;
+			connectBtn.style.display = 'inline';
+			hangupBtn.style.display = 'none';
+		}
+
+		// Event listeners for the buttons
+		connectBtn.addEventListener('click', startVideoCall);
+		hangupBtn.addEventListener('click', hangupVideoCall);
+	</script>
+</body>
+</html>
